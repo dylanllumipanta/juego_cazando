@@ -16,12 +16,15 @@ function iniciar(){
     graficarcomida();
 }
 
+function graficarRectangulo(x, y, ancho, alto, color){
+    ctx.fillStyle = color;
+    ctx.fillRect(x, y, ancho, alto);
+}
+
 function graficargato(){
-    ctx.fillStyle="gray";
-    ctx.fillRect(gatoX,gatoY,ANCHO_GATO,ALTO_GATO);
+    graficarRectangulo(gatoX,gatoY,ANCHO_GATO,ALTO_GATO,"gray");
 }
 
 function graficarcomida(){
-    ctx.fillStyle="green";
-    ctx.fillRect(comidaX,comidaY,ANCHO_COMIDA,ALTO_COMIDA);
+    graficarRectangulo(comidaX,comidaY,ANCHO_COMIDA,ALTO_COMIDA,"green");
 }
